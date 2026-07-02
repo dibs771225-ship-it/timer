@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🌸 집중 타이머</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jua&family=Gowun+Dodum&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="bg-decor">
+    <span class="deco d1">🌸</span>
+    <span class="deco d2">☁️</span>
+    <span class="deco d3">💕</span>
+    <span class="deco d4">🌸</span>
+    <span class="deco d5">☁️</span>
+  </div>
+
+  <main class="card">
+    <img src="logo.png" alt="로고" class="logo">
+    <h1 class="title">집중 타이머 <span>🌷</span></h1>
+    <p class="subtitle">오늘도 우리 같이 집중해봐요!</p>
+
+    <div class="timer-wrap">
+      <svg class="ring" viewBox="0 0 220 220">
+        <circle class="ring-bg" cx="110" cy="110" r="100"></circle>
+        <circle class="ring-progress" cx="110" cy="110" r="100"></circle>
+      </svg>
+      <div class="timer-center">
+        <span id="timeDisplay" class="time-display">00:00</span>
+        <span id="statusLabel" class="status-label">시간을 선택해주세요</span>
+      </div>
+    </div>
+
+    <div class="presets">
+      <button class="preset-btn" data-minutes="15">15분</button>
+      <button class="preset-btn" data-minutes="30">30분</button>
+    </div>
+
+    <div class="custom-row">
+      <input type="number" id="customMinutes" min="1" max="180" placeholder="직접 입력 (분)">
+      <button id="customStartBtn" class="custom-start-btn">시작</button>
+    </div>
+
+    <div class="controls">
+      <button id="pauseBtn" class="ctrl-btn" disabled>일시정지</button>
+      <button id="resetBtn" class="ctrl-btn" disabled>리셋</button>
+    </div>
+
+    <div id="completeMsg" class="complete-msg hidden">🎉 집중 완료! 정말 잘했어요 🎉</div>
+
+    <div class="session-log">
+      <span id="sessionLogText">오늘 아직 집중 기록이 없어요. 시작해볼까요? 🌸</span>
+    </div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
